@@ -31,7 +31,7 @@ def everything_for_your_cat(cats_data):
         dict_cat[full_name] = f'{dict_cat[full_name]}; {cat}' if dict_cat.get(full_name) else cat
     our_list = []
     for k, v in dict_cat.items():
-        our_list.append("'" + k + ': ' + str(v) + "'")
+        our_list.append(k + ': ' + str(v)
     our_str = '\n'.join(our_list)
     return our_str
 
