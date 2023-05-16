@@ -29,10 +29,9 @@ def everything_for_your_cat(cats_data):
         full_name = ' '.join(cats_data[i][2:])
         cat = ', '.join(map(str, cats_data[i][:2]))
         dict_cat[full_name] = f'{dict_cat[full_name]}; {cat}' if dict_cat.get(full_name) else cat
-    our_list = []
+    our_str = ''
     for k, v in dict_cat.items():
-        our_list.append(k + ': ' + str(v)
-    our_str = '\n'.join(our_list)
+        our_str = our_str + ''.join(k + ': ' + str(v) + '\n')
     return our_str
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
